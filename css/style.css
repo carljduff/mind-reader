@@ -1,0 +1,12 @@
+.goButton {
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+    color: #8BD8E2;
+    font-size: 50px;
+    background-color: white;
+}
+
+h1 {
+    font-size: 50px;
+}
