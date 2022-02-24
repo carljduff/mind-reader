@@ -16,40 +16,40 @@
 
 1. Page 1
 * bigText: "I can read your mind"
-* goButton: "Go"
+* startButton: "Go"
 * Items needed but Hidden: pageButton with text as "Next" and smallText
 
 2. Page 2 
 * Unhide pageButton with text as "Next" and smallText
-* Change goButton to restartButton 
+* Change startButton to *restart icon* 
 * bigText: "Pick a number from 01-99"
 * pageButton: "Next" 
 * smallText: "when you have your number click next"
-* restartButton: *restart icon*
+
 
 3. Page 3
 * bigText: "Add both digits together to get a new number"
 * pageButton: "Next"
 * smallText: Line 1: "Ex: 14 is 1+4=5" .... Line 2: "click next to proceed"
-* restartButton: *restart icon*
+* startButton: *restart icon*
 
 4. Page 4
 * bigText: "Subtract your new number from the original number"
 * pageButton: "Next"
 * smallText: Line 1: "Ex: 14-5 = 9" .... Line 2: "click next to proceed"
-* restartButton: *restart icon*
+* startButton: *restart icon*
 
 5. Page 5
 * bigText: 0-99 + each corresponding number will have a symbol. Multiples of 9 will receive the same symbol. Must be scrollable.
 * pageButton: "Reveal" 
 * smallText: Line 1: "Find your new number." .... Line 2: "Note the symbol beside the number."
-* restartButton: *restart icon*
+* startButton: *restart icon*
 
 6. Page 6
 * Hide reveal button.
 * bigText: symbol that's on every multiple of 9.
 * smallText: Line 1: "Your symbol is:" .... Line 2: *symbol*
-* restartButton: *restart icon*
+* startButton: *restart icon*
 
 <hr>
 
