@@ -5,7 +5,7 @@ let resetButton = document.getElementById('resetButton');
 let pageButton = document.getElementById('pageButton');
 //let symbols = randomArrayShuffle(["!", "@", "#", "$", "%", "^", "&", "*", "+"]);
 //let nineSymbol = randomArrayShuffle(symbols[0]);
-let number = "";
+//let number = "";
 let page = 1;
 
 
@@ -32,7 +32,7 @@ changeState();
 resetButton.addEventListener('click', reset())
 
 //function to get numbers
-function numberLoop () {
+/*function numberLoop () {
     for (i = 0; i < 100; i++) {
        if(number % 9 === 0) {
        number = number.push(i) + nineSymbol; 
@@ -40,6 +40,23 @@ function numberLoop () {
         number = number.push(i) + symbols;
        }
     }
+}*/
+let nineSymbol = "";
+
+function shuffle() {
+    let symbols = ["!", "@", "#", "$", "%", "^", "&", "*", "+"];
+    nineSymbol = symbols[0];
+    let number = "";
+    for(i = 0; i < 100; i++) {
+    if (i % 9 === 0) {
+        number += i + ":" + nineSymbol + "\n";
+    } else {
+        let random = symbols[Math.floor(Math.random() * 9)]
+        number += i + ":" + random + "\n";
+        
+    }
+}
+return number;
 }
 
 //function to randomize symbols
@@ -55,51 +72,52 @@ function numberLoop () {
     return array;
   }*/
 
+  
 //function to change states (pages to make it simpler for me)
 function changeState() {
     if(page === 1) {
-        bigText.innerHTML = "I can read your mind!";
-        goButton.innerHTML = "GO";
+        bigText.innerText = "I can read your mind!";
+        goButton.innerText = "GO";
         goButton.hidden = false;
         resetButton.hidden = true;
         pageButton.hidden = true;
         smallText.hidden = true;
     } else if (page === 2) {
-        bigText.innerHTML = "Pick a number from 01-99.";
+        bigText.innerText = "Pick a number from 01-99.";
         goButton.hidden = true;
-        resetButton.innerHTML = "RESET";
+        resetButton.innerText = "RESET";
         resetButton.hidden = false;
-        pageButton.innerHTML = "NEXT";
+        pageButton.innerText = "NEXT";
         pageButton.hidden = false;
-        smallText.innerHTML = "When you have your number, click next.";
+        smallText.innerText = "When you have your number, click next.";
         smallText.hidden = false;
     } else if (page === 3) {
-        bigText.innerHTML = "Add both digits together to get a new number.";
-        resetButton.innerHTML = "RESET";
-        pageButton.innerHTML = "NEXT";
+        bigText.innerText = "Add both digits together to get a new number.";
+        resetButton.innerText = "RESET";
+        pageButton.innerText = "NEXT";
         pageButton.hidden = false;
-        smallText.innerHTML = "Ex: 14 is 1+4=5 <br> Click next to proceed."
+        smallText.innerText = "Ex: 14 is 1+4=5 \n Click next to proceed."
         smallText.hidden = false;
     } else if (page === 4) {
-        bigText.innerHTML = "Subtract your new number from the original number.";
-        resetButton.innerHTML = "RESET";
-        pageButton.innerHTML = "NEXT";
+        bigText.innerText = "Subtract your new number from the original number.";
+        resetButton.innerText = "RESET";
+        pageButton.innerText = "NEXT";
         pageButton.hidden = false;
-        smallText.innerHTML = "Ex: 14-5=9 <br> Click next to proceed."
+        smallText.innerText = "Ex: 14-5=9 \n Click next to proceed."
         smallText.hidden = false;
     } else if (page === 5) {
-        bigText.innerHTML = number;
-        resetButton.innerHTML = "RESET";
-        pageButton.innerHTML = "REVEAL";
+        bigText.innerText = shuffle();
+        resetButton.innerText = "RESET";
+        pageButton.innerText = "REVEAL";
         pageButton.hidden = false;
-        smallText.innerHTML = "Find your new number. <br> Note the symbol beside the number.";
+        smallText.innerText = "Find your new number. \n Note the symbol beside the number.";
         smallText.hidden = false;
     } else if (page === 6) {
-        bigText.innerHTML = nineSymbol;
+        bigText.innerText = nineSymbol;
         goButton.hidden = true;
-        resetButton.innerHTML = "RESET";
+        resetButton.innerText = "RESET";
         pageButton.hidden = true;
-        smallText.innerHTML = `Your symbol is: <br> ${nineSymbol}`;
+        smallText.innerText = `Your symbol is: \n ${nineSymbol}`;
         smallText.hidden = false;
     }
 };
