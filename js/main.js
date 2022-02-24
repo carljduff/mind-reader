@@ -24,6 +24,7 @@ pageButton.addEventListener('click', changePage())
 function reset() {
 page = 1;
 changeState();
+//shuffle();
 
 
 
