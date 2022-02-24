@@ -3,10 +3,8 @@
 <hr>
 
 * Single Page App
-* The symbol must be the same for all multiples of 9.
 * The __Go__ button is only on Page 1.
 * The __Restart__ button will replace the go button on Pages 2-6.
-* The symbol cannot be the same for multiples of 9 on the 2nd or 3rd play.
 * The pageButton appears on Pages 2-4 as "Next", then is replaced with "Reveal" on Page 5.
 * There are two different text sizes.
 * On Pages 2-4, only the text needs to change. 
@@ -60,7 +58,7 @@
 <hr> 
 
 1. Pages
-* Pages 1-6 representing each state.
+* Pages 1-6 representing each state. ()
 * Contains the main content: buttons and text.
 
 2. Buttons
@@ -72,18 +70,19 @@
 
 <hr>
 
-## Functions
+## Output 
 
 <hr>
 
-1. Pages
-* bigText: contains the h1 element for the larger text.
-* smallText: contains the paragraph element for the smaller text.
+1. A numbered list from 0-99 (for loop) and random symbols.
+* Symbols will be random each time. (Array of symbols, use random function, put this in the for loop?)
+* The symbol will be the same for all multiples of 9. (if % 9 === 0, must select a single symbol from the symbols array. Set a variable to the first item in the symbols array... I.E: let nineSymbol = symbols[0];)
+* The symbol for multiples of 9 must change after you start over. (Randomize symbols function and add this function to the reset function.)
 
-2. Buttons
-* goButton(): takes the user from Page 1 to Page 2.
-* pageButton(): on Page 2 through Page 5, display "Next" to take the user from Page 2 through Page 4. Display "Reveal" on Page 5. It's the same functionality.
-* restartButton(): takes the user back to Page 1.
+
+
+
+
 
 
 
