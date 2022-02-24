@@ -14,14 +14,9 @@ function changePage() {
     //goButton & page button both need this function on a click event
 };
 
-function go() {
-    if (page === 1) {
-    page = 2; //go to page one
-    changeState();
-    } else {
-    page = 1;
-    changeState();
-    }  
+function reset() {
+page = 1;
+changeState();
 };
 
 /*
@@ -52,7 +47,7 @@ function randomArrayShuffle(array) {
 //function to change states (pages to make it simpler for me)
 function changeState() {
     if(page === 1) {
-        bigText.innerHTML = "I can read your mind!";
+        bigText.innerHTML.display = "I can read your mind!";
         goButton.innerHTML = "Go";
         pageButton.hidden = true;
         smallText.hidden = true;
@@ -87,5 +82,9 @@ function changeState() {
     // hide and show different dom elements...
 
 
-
-changeState();
+//start the page function to attach to body as onload
+function start() {
+    changePage()
+    reset()
+    changeState()
+};
