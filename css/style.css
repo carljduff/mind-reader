@@ -1,0 +1,31 @@
+.goButton, .resetButton {
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+    color: #8BD8E2; 
+}
+
+h1 {
+    font-size: 50px;
+    text-align: center;
+    color: #707070;
+}
+
+h5 {
+    text-align: center;
+    color: #8BD8E2;
+}
+
+.pageButton {
+    background-color: #8BD8E2;
+    padding-left: 150px !important;
+    padding-right: 150px !important;
+}
+
+.bigText {
+    overflow: scroll;
+    max-height: 500px;
+}
+
+
+
