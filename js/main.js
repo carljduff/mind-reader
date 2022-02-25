@@ -99,14 +99,14 @@ function changeState() {
         resetButton.innerText = "RESET";
         pageButton.innerText = "NEXT";
         pageButton.hidden = false;
-        smallText.innerText = "Ex: 14 is 1+4=5 \n Click next to proceed."
+        smallText.innerText = "Ex: 14 is 1+4=5 \n \n Click next to proceed."
         smallText.hidden = false;
     } else if (page === 4) {
         bigText.innerText = "Subtract your new number from the original number.";
         resetButton.innerText = "RESET";
         pageButton.innerText = "NEXT";
         pageButton.hidden = false;
-        smallText.innerText = "Ex: 14-5=9 \n Click next to proceed."
+        smallText.innerText = "Ex: 14-5=9 \n \n Click next to proceed."
         smallText.hidden = false;
     } else if (page === 5) {
         bigText.innerText = shuffle();
