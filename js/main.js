@@ -42,15 +42,17 @@ resetButton.addEventListener('click', reset())
        }
     }
 }*/
-let nineSymbol = "";
 
+let nine = "";
 function shuffle() {
     let symbols = ["!", "@", "#", "$", "%", "^", "&", "*", "+"];
-    nineSymbol = symbols[0];
+    //let nineSymbol = symbols[0];
+    let nineSymbol = symbols[Math.floor(Math.random() * 9)]
+    nine = nineSymbol;
     let number = "";
     for(i = 0; i < 100; i++) {
     if (i % 9 === 0) {
-        number += i + ":" + nineSymbol + "\n";
+        number += i + ": " + nineSymbol + "\n";
     } else {
         let random = symbols[Math.floor(Math.random() * 9)]
         number += i + ":" + random + "\n";
@@ -114,7 +116,7 @@ function changeState() {
         smallText.innerText = "Find your new number. \n Note the symbol beside the number.";
         smallText.hidden = false;
     } else if (page === 6) {
-        bigText.innerText = nineSymbol;
+        bigText.innerText = nine;
         goButton.hidden = true;
         resetButton.innerText = "RESET";
         pageButton.hidden = true;
