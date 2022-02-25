@@ -1,22 +1,23 @@
-.goButton {
+.goButton, .resetButton {
     border-radius: 50%;
     height: 100px;
     width: 100px;
     color: #8BD8E2;
-    font-size: 50px;
-    background-color: white;
-    align-items: flex-end;
+    
+    
+    
 }
 
 h1 {
     font-size: 50px;
-    overflow: auto;
+    text-align: center;
 }
 
-.container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+h5 {
+    text-align: center;
 }
+
+
+
 
 
