@@ -10,27 +10,29 @@ let page = 1;
 
 
 
+
 //function to change page(attach to goButton & next)
 function changePage() {
     page++;
     changeState();//function with page information   
     //goButton & page button both need this function on a click event
+    //console.log('1');
+    
 };
 
-goButton.addEventListener('click', changePage())
-pageButton.addEventListener('click', changePage())
+goButton.addEventListener('click', changePage);
+pageButton.addEventListener('click', changePage);
 
 //function to reset page
 function reset() {
 page = 1;
 changeState();
+//console.log('2');
 //shuffle();
-
-
-
 };
 
-resetButton.addEventListener('click', reset())
+resetButton.addEventListener('click', reset);
+reset();
 
 //function to get numbers
 /*function numberLoop () {
@@ -78,6 +80,7 @@ return number;
   
 //function to change states (pages to make it simpler for me)
 function changeState() {
+    //console.log('4');
     if(page === 1) {
         bigText.innerText = "I can read your mind!";
         goButton.innerText = "GO";
@@ -120,7 +123,7 @@ function changeState() {
         goButton.hidden = true;
         resetButton.innerText = "RESET";
         pageButton.hidden = true;
-        smallText.innerText = `Your symbol is: \n ${nineSymbol}`;
+        smallText.innerText = `Your symbol is: \n ${nine}`;
         smallText.hidden = false;
     }
 };

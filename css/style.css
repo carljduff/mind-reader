@@ -2,10 +2,7 @@
     border-radius: 50%;
     height: 100px;
     width: 100px;
-    color: #8BD8E2;
-    
-    
-    
+    color: #8BD8E2; 
 }
 
 h1 {
@@ -21,8 +18,14 @@ h5 {
 
 .pageButton {
     background-color: #8BD8E2;
+    padding-left: 150px !important;
+    padding-right: 150px !important;
 }
 
+.bigText {
+    overflow: scroll;
+    max-height: 500px;
+}
 
 
 
