@@ -9,24 +9,38 @@ let pageButton = document.getElementById('pageButton');
 let page = 1;
 
 
+function hide(variable) {
+    variable.hidden = true;
+}
+function show(variable) {
+
+    variable.hidden = false;
+}
+
+function nextPage() {
+    page++;
+    changeState();
+}
 
 
 //function to change page(attach to goButton & next)
+/*
 function changePage() {
     page++;
-    changeState();//function with page information   
+    //function with page information   
     //goButton & page button both need this function on a click event
     //console.log('1');
     
-};
+};*/
 
-goButton.addEventListener('click', changePage);
-pageButton.addEventListener('click', changePage);
+
+
+goButton.addEventListener('click', nextPage);
+pageButton.addEventListener('click', nextPage);
 
 //function to reset page
 function reset() {
 page = 1;
-changeState();
 //console.log('2');
 //shuffle();
 };
@@ -76,58 +90,126 @@ return number;
     }
     return array;
   }*/
+function changeState() {
 
-  
+
+  switch (page) {
+    case 1:
+        //page = 2;
+        bigText.innerText = "I can read your mind!";
+        goButton.innerText = "GO";
+        show(goButton);
+        hide(resetButton);
+        hide(pageButton);
+        hide(smallText);
+        break;
+
+    case 2: 
+        //page = 3;
+        bigText.innerText = "Pick a number from 01-99.";
+        hide(goButton);
+        resetButton.innerText = "RESET";
+        show(resetButton);
+        pageButton.innerText = "NEXT";
+        show(pageButton)
+        smallText.innerText = "When you have your number, click next.";
+        show(smallText);
+        break;
+
+    case 3:
+        //page++;
+        bigText.innerText = "Add both digits together to get a new number.";
+        resetButton.innerText = "RESET";
+        pageButton.innerText = "NEXT";
+        show(pageButton);
+        smallText.innerText = "Ex: 14 is 1+4=5 \n \n Click next to proceed."
+        show(smallText);
+        break;
+
+    case 4:
+        //page++
+        bigText.innerText = "Subtract your new number from the original number.";
+        resetButton.innerText = "RESET";
+        pageButton.innerText = "NEXT";
+        show(pageButton)
+        smallText.innerText = "Ex: 14-5=9 \n \n Click next to proceed."
+        show(smallText);
+        break;
+
+    case 5:
+        //page++
+        bigText.innerText = shuffle();
+        resetButton.innerText = "RESET";
+        pageButton.innerText = "REVEAL";
+        show(pageButton)
+        smallText.innerText = "Find your new number. \n Note the symbol beside the number.";
+        show(smallText);
+        break;
+
+    case 6:
+        //page++
+        bigText.innerText = nine;
+        hide(goButton);
+        resetButton.innerText = "RESET";
+        hide(pageButton)
+        smallText.innerText = `Your symbol is: \n ${nine}`;
+        show(smallText);
+        break;
+
+  }
+}
+changeState();
+/*  
 //function to change states (pages to make it simpler for me)
 function changeState() {
     //console.log('4');
     if(page === 1) {
         bigText.innerText = "I can read your mind!";
         goButton.innerText = "GO";
-        goButton.hidden = false;
-        resetButton.hidden = true;
-        pageButton.hidden = true;
-        smallText.hidden = true;
+        show(goButton);
+        hide(resetButton);
+        hide(pageButton);
+        hide(smallText);
     } else if (page === 2) {
         bigText.innerText = "Pick a number from 01-99.";
-        goButton.hidden = true;
+        hide(goButton);
         resetButton.innerText = "RESET";
-        resetButton.hidden = false;
+        show(resetButton);
         pageButton.innerText = "NEXT";
-        pageButton.hidden = false;
+        show(pageButton)
         smallText.innerText = "When you have your number, click next.";
-        smallText.hidden = false;
+        show(smallText);
     } else if (page === 3) {
         bigText.innerText = "Add both digits together to get a new number.";
         resetButton.innerText = "RESET";
         pageButton.innerText = "NEXT";
-        pageButton.hidden = false;
+        show(pageButton);
         smallText.innerText = "Ex: 14 is 1+4=5 \n \n Click next to proceed."
-        smallText.hidden = false;
+        show(smallText);
     } else if (page === 4) {
         bigText.innerText = "Subtract your new number from the original number.";
         resetButton.innerText = "RESET";
         pageButton.innerText = "NEXT";
-        pageButton.hidden = false;
+        show(pageButton)
         smallText.innerText = "Ex: 14-5=9 \n \n Click next to proceed."
-        smallText.hidden = false;
+        show(smallText);
     } else if (page === 5) {
         bigText.innerText = shuffle();
         resetButton.innerText = "RESET";
         pageButton.innerText = "REVEAL";
-        pageButton.hidden = false;
+        show(pageButton)
         smallText.innerText = "Find your new number. \n Note the symbol beside the number.";
-        smallText.hidden = false;
+        show(smallText);
     } else if (page === 6) {
         bigText.innerText = nine;
-        goButton.hidden = true;
+        hide(goButton);
         resetButton.innerText = "RESET";
-        pageButton.hidden = true;
+        hide(pageButton)
         smallText.innerText = `Your symbol is: \n ${nine}`;
-        smallText.hidden = false;
+        show(smallText);
     }
 };
     //if else statements for each page... 
     // hide and show different dom elements...
-
+*/
 
