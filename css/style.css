@@ -1,7 +1,6 @@
 .goButton, .resetButton {
-    border-radius: 50%;
-    height: 100px;
-    width: 100px;
+    height: 50px;
+    width: 75px; 
     color: #8BD8E2; 
 }
 
@@ -27,5 +26,17 @@ h5 {
     max-height: 500px;
 }
 
+
+.wrapper {
+    max-width: 500px;
+    margin: auto;
+    margin-top: 25vh;
+}
+.buttons {
+    display: flex;
+    justify-content: right;
+    margin-top: 30px;
+   
+}
 
 
